@@ -672,6 +672,7 @@ body, html {
     margin: 0px 25px 25px 25px;
     clear: left;
     float: left;
+    text-align: center;
 }
 .img_with_sgn p {
     text-align: center !important; 
