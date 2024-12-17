@@ -23,6 +23,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
+    border-bottom: 2px groove;
 }
 
 .step_custom-title {
@@ -36,7 +37,7 @@
     margin: 5px;
 }
 
-.step_custom p {
+.step_custom p, .step_custom_uniq p {
     margin: 0;
     line-height: 1.6;
 }
@@ -44,7 +45,12 @@
 .sub-step {
     display: flex;
     flex-direction: column;
-    margin-left: 55px;
+    /* margin-left: 55px; */
+    border-bottom: 2px groove;
+}
+
+.sub-step p {
+    text-indent: 4%;
 }
 
 .step_custom_uniq {
@@ -141,6 +147,32 @@
 
 .ul_custom li {
     padding: 3px;
+}
+
+
+#content > div:nth-child(4) > p > ol > li:nth-child(3) > ol {
+    list-style: none;
+    text-indent: 2%;
+}
+
+#content > div:nth-child(4) > p > ol > li:nth-child(3) > ol > li:nth-child(1)::before {
+    content: '3.1. ';
+}
+
+#content > div:nth-child(4) > p > ol > li:nth-child(3) > ol > li:nth-child(2)::before {
+    content: '3.2. ';
+}
+
+#content > div:nth-child(4) > p > ol > li:nth-child(3) > ol > li:nth-child(3)::before {
+    content: '3.3. ';
+}
+
+#content > div:nth-child(4) > p > ol > li:nth-child(3) > ol > li:nth-child(4)::before {
+    content: '3.4. ';
+}
+
+#content > div:nth-child(4) > p > ol > li:nth-child(3) > ol > li:nth-child(5)::before {
+    content: '3.5. ';
 }
 
 .two_img_custom img {

@@ -243,6 +243,7 @@ line{
 }
 .text_with_img{
     width: 100%;
+    clear: left;
 }
 .text_with_img img{
     width: 100%;
