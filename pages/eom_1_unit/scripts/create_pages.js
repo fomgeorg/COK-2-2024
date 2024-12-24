@@ -94,6 +94,9 @@ function createOnlyImage(paragraph) {
         // Если есть изображение, создаем и добавляем элемент изображения
         if (item.image) {
             let imgElement;
+            if(item.id){
+                container.className = `only_img unic_img_${item.id}`;
+            }
             if (item.image_path.includes(".jpg") || item.image_path.includes(".png")) {
                 imgElement = document.createElement('img');
                 imgElement.classList = 'zoomable';
@@ -101,6 +104,7 @@ function createOnlyImage(paragraph) {
                 imgElement = document.createElement('video');
                 imgElement.controls = "controls";
             }
+
             if (imgElement) {  // Проверяем, что элемент был создан
                 imgElement.src = item.image_path;
                 imgElement.alt = 'image';
